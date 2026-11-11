@@ -15,18 +15,25 @@ public class MoneyMath {
         System.out.println("Value of Double: " + initialDouble);
         System.out.println("Value of BigDecimal: " + initialBD);
 
-        while(loop <= 10){
+        while(loop < 10){
             initialFloat = (float) (initialFloat + tencent);
             initialDouble += tencent;
             initialBD = initialBD.add(BigDecimal.valueOf(tencent));
 
-            // print each variables
+            // print each variable
+            System.out.println((loop + 1) + ".");
             System.out.println("Value of Float: " + initialFloat);
             System.out.println("Value of Double: " + initialDouble);
             System.out.println("Value of BigDecimal: " + initialBD);
+            System.out.println("---------------------------");
 
             loop += 1;
         }
+
+        System.out.println();
+        System.out.println("-----------");
+        System.out.println("New Loop");
+        System.out.println("-----------");
         // reset values
         initialFloat = 0;
         initialDouble = 0.00;
@@ -35,19 +42,20 @@ public class MoneyMath {
         loop = 0;
 
         // Print initial values
+        System.out.println();
         System.out.println("Value of Float: " + initialFloat);
         System.out.println("Value of Double: " + initialDouble);
         System.out.println("Value of BigDecimal: " + initialBD);
+        System.out.println();
 
-        while(loop <= 10){
-            initialFloat = (float) (initialFloat + tencent);
-            initialDouble += tencent;
-            initialBD = initialBD.add(BigDecimal.valueOf(tencent));
+        while(loop < 1000){
+            initialFloat = (float) (initialFloat + price);
+            initialDouble += price;
+            initialBD = initialBD.add(BigDecimal.valueOf(price));
 
-            // print each variables
-            System.out.println("Value of Float: " + initialFloat);
-            System.out.println("Value of Double: " + initialDouble);
-            System.out.println("Value of BigDecimal: " + initialBD);
+            // print each variable on one line
+            System.out.println((loop + 1) + ". " + "Float:" + initialFloat + " - Double:" + initialDouble +" - BigDecimal:" + initialBD);
+            System.out.println("-------------------------------------------------------------------------");
 
             loop += 1;
         }
